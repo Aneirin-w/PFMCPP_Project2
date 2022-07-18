@@ -128,7 +128,7 @@ bool buyAnIphone(int price = 1000, bool blueColour = true)
 /*
  4)
  */
-float ComparePricesOfLaptop(float a, float b, float c, float d, float e)
+float comparePricesOfLaptop(float a, float b, float c, float d, float e)
 {
     ignoreUnused(a, b, c, d, e);
     return {};
@@ -216,7 +216,7 @@ int main()
     auto newPhonePrice = buyAnIphone(2000, false);
     
     //4)
-    float costOfTowel = ComparePricesOfLaptop(23.f, 22.5f, 19.56f, 29.22f, 33.f);
+    float costOfTowel = comparePricesOfLaptop(23.f, 22.5f, 19.56f, 29.22f, 33.f);
     
     //5)
     displayOutputLevel(-1);
