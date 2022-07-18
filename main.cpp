@@ -101,16 +101,16 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-int soundPressureLevel(int weightingA = 75, int weightingC = 84)
+int showSoundPressureLevel(int weightingA = 75, int weightingC = 84)
 {
-   ignoreUnused(weightingA, weightingC); 
+    ignoreUnused(weightingA, weightingC);
     return {};
 } 
 
 /*
  2)
  */
-int howMuchMoneyIHave(int cash = 100, int bank = 22, int onLoan = 55000)
+int calculateMyCurrentMonies(int cash = 100, int bank = 22, int onLoan = 55000)
 {
     ignoreUnused(cash, bank, onLoan);
     return {};
@@ -128,16 +128,16 @@ bool buyAnIphone(int price = 1000, bool blueColour = true)
 /*
  4)
  */
-float priceComparison(float A, float B, float C, float D, float E)
+float ComparePricesOfLaptop(float a, float b, float c, float d, float e)
 {
-    ignoreUnused(A, B, C, D, E);
+    ignoreUnused(a, b, c, d, e);
     return {};
 }
 
 /*
  5)
  */
-void outputLevel(int master = -1)
+void displayOutputLevel(int master = -1)
 {
     ignoreUnused(master);
 }
@@ -154,18 +154,18 @@ bool shouldICutHair(bool hairLong = true, int price = 10, int distanceAwayInMetr
 /*
  7)
  */
-float sampleRateOptions(float A = 44.1f, float B = 48.f, float C = 88.2f, float D = 96.f)
+float selectASampleRateForYourProject(float a = 44.1f, float b = 48.f, float c = 88.2f, float d = 96.f)
 {
-    ignoreUnused(A, B, C, D);
+    ignoreUnused(a, b, c, d);
     return {};
 }
 
 /*
  8)
  */
-bool goForAWalk(double temperature = 20.2, int uv = 300, bool rain = false)
+bool goForAWalk(double temperatureInCelsius = 20.2, bool isItRaining = false)
 {
-    ignoreUnused(temperature, uv, rain);
+    ignoreUnused(temperatureInCelsius, isItRaining);
     return {};
 }
 
@@ -181,9 +181,9 @@ float calculateAmountOfLiquidYield(int numberOfApples = 50, double volumeOfWater
 /*
  10)
  */
-int smoothieRecipe(float pineapple = 0.5, int strawberry = 10, int orangeJuiceInLitres = 1, int banana = 2, int boxesOfBlueberries = 1, int teaspoonOfHoney = 3)
+int makeSuperSmoothie(float numberOfPineappleSlices = 0.5, int boxesOfStrawberries = 10, int orangeJuiceInLitres = 1, int numberOfBanana = 2, int boxesOfBlueberries = 1, int teaspoonOfHoney = 3)
 {
-    ignoreUnused(pineapple, strawberry, orangeJuiceInLitres, banana, boxesOfBlueberries, teaspoonOfHoney);
+    ignoreUnused(numberOfPineappleSlices, boxesOfStrawberries, orangeJuiceInLitres, numberOfBanana, boxesOfBlueberries, teaspoonOfHoney);
     return {};
 }
 
@@ -207,37 +207,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    int venueLoudnessMeasurement = soundPressureLevel(75, 84);
+    int venueLoudnessMeasurement = showSoundPressureLevel(75, 84);
     
     //2)
-    int assets = howMuchMoneyIHave(100, 22, 55000);
+    int assets = calculateMyCurrentMonies(100, 22, 55000);
     
     //3)
     auto newPhonePrice = buyAnIphone(2000, false);
     
     //4)
-    float costOfTowel = priceComparison(23.f, 22.5f, 19.56f, 29.22f, 33.f);
+    float costOfTowel = ComparePricesOfLaptop(23.f, 22.5f, 19.56f, 29.22f, 33.f);
     
     //5)
-    outputLevel(-1);
+    displayOutputLevel(-1);
     
     //6)
     bool goToBarber = shouldICutHair(false, 22, 500);
     
     //7)
-    float startUpDAW = sampleRateOptions(44.1f, 48.f, 88.2f, 96.f);
+    float startUpDAW = selectASampleRateForYourProject(44.1f, 48.f, 88.2f, 96.f);
     
     //8)
-    bool stayHome = goForAWalk(30.3, 400, true);
+    bool stayHome = goForAWalk(30.3, true);
     
     //9)
     float appleJuice = calculateAmountOfLiquidYield(3, 0.5);
     
     //10)
-    int makeSmoothie = smoothieRecipe(3, 4, 2, 6, 1, 1);
+    int totalIngredients = makeSuperSmoothie(3, 4, 2, 6, 1, 1);
     
     
-    ignoreUnused(carRented, venueLoudnessMeasurement, assets, newPhonePrice, costOfTowel, goToBarber, startUpDAW, stayHome, appleJuice, makeSmoothie);
+    ignoreUnused(carRented, venueLoudnessMeasurement, assets, newPhonePrice, costOfTowel, goToBarber, startUpDAW, stayHome, appleJuice, totalIngredients);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
