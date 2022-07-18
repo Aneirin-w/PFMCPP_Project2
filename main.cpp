@@ -15,13 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double  
+ char
+ unsigned int
  
  
  
@@ -64,10 +63,28 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int numberOfDaysLeft = -365;
+    int cashAmount = 5;
+    int trackCount = 162;
+    float myHeightInCm = 173.2f;
+    float sampleRate = 44.1f;
+    float timeRemainingInMinutes = 22.3f;
+    bool didIPassMyExam = false;
+    bool didYouWinTheLottery = true;
+    bool didHeDriveHere = true;
+    double myWeightInKG = 66.75;
+    double priceOfCarInDollars = 230978.65;
+    double distanceLeftInKm = 2.41;
+    unsigned int numberOfSpeakers = 11;
+    unsigned int numberOfCompressors = 25;
+    unsigned int threadCount = 255;
+    char grade = 'a';
+    char mostPopularLetter = 'e';
+    char myCountry = 's';
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, numberOfDaysLeft, cashAmount, trackCount, myHeightInCm, sampleRate, timeRemainingInMinutes, didIPassMyExam, didYouWinTheLottery, didHeDriveHere, myWeightInKG, priceOfCarInDollars, distanceLeftInKm, numberOfSpeakers, numberOfCompressors, threadCount, grade, mostPopularLetter, myCountry); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +101,91 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+int soundPressureLevel(int weightingA = 75, int weightingC = 84)
+{
+   ignoreUnused(weightingA, weightingC); 
+    return {};
+} 
 
 /*
  2)
  */
+int howMuchMoneyIHave(int cash = 100, int bank = 22, int onLoan = 55000)
+{
+    ignoreUnused(cash, bank, onLoan);
+    return {};
+}
 
 /*
  3)
  */
+bool buyAnIphone(int price = 1000, bool blueColour = true)
+{
+    ignoreUnused(price, blueColour);
+    return {};
+}
 
 /*
  4)
  */
+float priceComparison(float A, float B, float C, float D, float E)
+{
+    ignoreUnused(A, B, C, D, E);
+    return {};
+}
 
 /*
  5)
  */
+void outputLevel(int master = -1)
+{
+    ignoreUnused(master);
+}
 
 /*
  6)
  */
+bool shouldICutHair(bool hairLong = true, int price = 10, int distanceAwayInMetres = 100)
+{
+    ignoreUnused(hairLong, price, distanceAwayInMetres);
+    return {};
+}
 
 /*
  7)
  */
+float sampleRateOptions(float A = 44.1f, float B = 48.f, float C = 88.2f, float D = 96.f)
+{
+    ignoreUnused(A, B, C, D);
+    return {};
+}
 
 /*
  8)
  */
+bool goForAWalk(double temperature = 20.2, int uv = 300, bool rain = false)
+{
+    ignoreUnused(temperature, uv, rain);
+    return {};
+}
 
 /*
  9)
  */
+float calculateAmountOfLiquidYield(int numberOfApples = 50, double volumeOfWater = 1.5)
+{
+    ignoreUnused (numberOfApples, volumeOfWater);
+    return {};
+}
 
 /*
  10)
  */
+int smoothieRecipe(float pineapple = 0.5, int strawberry = 10, int orangeJuiceInLitres = 1, int banana = 2, int boxesOfBlueberries = 1, int teaspoonOfHoney = 3)
+{
+    ignoreUnused(pineapple, strawberry, orangeJuiceInLitres, banana, boxesOfBlueberries, teaspoonOfHoney);
+    return {};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +207,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    int venueLoudnessMeasurement = soundPressureLevel(75, 84);
     
     //2)
+    int assets = howMuchMoneyIHave(100, 22, 55000);
     
     //3)
+    auto newPhonePrice = buyAnIphone(2000, false);
     
     //4)
+    float costOfTowel = priceComparison(23.f, 22.5f, 19.56f, 29.22f, 33.f);
     
     //5)
+    outputLevel(-1);
     
     //6)
+    bool goToBarber = shouldICutHair(false, 22, 500);
     
     //7)
+    float startUpDAW = sampleRateOptions(44.1f, 48.f, 88.2f, 96.f);
     
     //8)
+    bool stayHome = goForAWalk(30.3, 400, true);
     
     //9)
+    float appleJuice = calculateAmountOfLiquidYield(3, 0.5);
     
     //10)
+    int makeSmoothie = smoothieRecipe(3, 4, 2, 6, 1, 1);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, venueLoudnessMeasurement, assets, newPhonePrice, costOfTowel, goToBarber, startUpDAW, stayHome, appleJuice, makeSmoothie);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
